@@ -1,0 +1,47 @@
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 1px solid #fff;
+  border-radius: 1rem;
+  padding-top: clamp(2rem, 5vw, 4rem);
+  padding-bottom: clamp(2rem, 5vw, 4rem);
+  padding-left: clamp(1rem, 2.5vw, 2rem);
+  padding-right: clamp(1rem, 2.5vw, 2rem);
+  background: -webkit-gradient(linear, left top, right top, from(#d44d34), color-stop(#af31ab), to(#6cd5c0));
+  background: linear-gradient(90deg, #d44d34, #af31ab, #6cd5c0);
+}
+
+.header__text {
+  text-transform: uppercase;
+  color: #fff;
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+}
+
+.header__time {
+  border: 1px solid #000;
+  border-radius: 0.5rem;
+  padding: clamp(0.5rem, 1.25vw, 1rem);
+  background-color: #e7dddd;
+  color: #1e1192;
+  font-size: clamp(1rem, 2vw, 1.5rem);
+}
+
+.header date {
+  display: block;
+  text-align: end;
+}
+
+@media screen and (max-width: 960px) and (orientation: landscape) {
+  .header {
+    padding-top: clamp(1rem, 2.5vw, 2rem);
+    padding-bottom: clamp(1rem, 2.5vw, 2rem);
+  }
+}
+/*# sourceMappingURL=header_style.css.map */

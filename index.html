@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;700&family=Oswald:wght@300;400;600;700&family=Raleway:ital,wght@0,400;0,500;0,600;0,700;0,900;1,500&family=Rubik+Beastly&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/style.css">
+    <title>TRELLO</title>
+</head>
+<body>
+    <header>
+        <div class="wrapper">
+            <div class="container">
+                <div class="header">
+            <p class="header__text">Trello</p>
+            <p class="header__time"> </p>
+        </div>
+        </div>
+    </div>
+    </header>
+    <main>
+    <div class="wrapper">
+        <div class="container">
+            
+            <div class="board-wrapper">
+            <div class="board" id="board_todo">
+            
+                <div id="todo-header" class="board__header todo ">
+                    <p>TODO:</p>
+                    <span id="count_todo">0</span>
+                </div>           
+                   <div class="board__task-wrapper todo-wrapper">
+                                  
+                </div>
+                <div class="board__footer todo">
+                    <button class="board__footer-btn board__add-todo">Add todo</button>
+                </div>
+            </div>                 
+            
+            <div class="board task-hidden" id="board_in-progress">                
+                    <div id="in-progress-header" class="board__header in-progress ">
+                        <p>IN PROGRESS:</p>
+                        <span id="count_in-progress">0</span>                    
+                    </div>
+                    <div class="board__task-wrapper in-progress-wrapper">
+                        
+                     </div>
+            </div>
+            <div class="board task-hidden" id="board_done">
+                <div id="done-header" class="board__header done ">
+                    <p>DONE:</p>
+                    <span id="count_done">0</span>                    
+                </div>
+                <div class="board__task-wrapper done-wrapper">
+                   
+                 </div>
+                 <div class="board__footer done">
+                    <button class="board__footer-btn board__delete-all">Delete all</button>
+                </div>          
+           </div>          
+        </div>         
+    </div> 
+
+<div class="overlay"></div> 
+        <form class="task__edit">
+            <input class="task__edit-title" placeholder="Title"></input>
+            <textarea class="task__edit-description" placeholder="Description"></textarea>
+            <div class="task__edit-footer">
+                <select name="user-name" class="task__edit-user">
+                  
+                </select>
+                <div class="empty"></div>
+                <button type='button' class="task__edit-cancel btn">Cancel</button>
+                <button type='button' class="task__edit-confirm btn">Confirm</button>
+            </div>
+        </form>
+
+        <div  class="overlay-warning"></div> 
+        <form class="warning">
+                <p class="warning__text">WARNING</p>
+                <p class="warning__text-description"></p>
+                <div class="warning__buttons">
+                <button type='button' class="warning__cancel btn" id="warning__cancel"><a href="#">Cancel</a> </button>
+                <button type='button' class="warning__confirm btn" id="warning__confirm">Confirm</button>
+            </div>
+            </div>
+        </form>
+    </main>
+    <script src="./app/app.js" type="module"></script>
+</body>
+</html>

@@ -1,0 +1,103 @@
+@import "variables.scss";
+@import "window_style.scss";
+@import "boards_style.scss";
+@import "header_style.scss";
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  outline: none;
+  border: none;
+  background-color: inherit;
+  text-transform: none;
+  text-decoration: none;
+  color: inherit;
+}
+
+html,
+body {
+  max-height: 100vh;
+  height: 100%;
+}
+
+@media all and (orientation: landscape) {
+  html,
+  body {
+    max-height: none;
+    height: 100%;
+  }
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+main {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+a,
+span,
+p,
+input,
+button,
+date,
+select,
+option,
+textarea,
+::placeholder {
+  font-family: "Oswald", sans-serif;
+  font-size: clamp(0.9rem, 1.6vw, 1.2rem);
+  line-height: 1.2;
+  color: $font-color-board;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: #575753;
+  min-height: 100%;
+  min-width: 15rem;
+  overflow: auto;
+}
+
+.container {
+  max-width: 1416px;
+  flex: 1;
+  padding: 0.5rem;
+  height: 100%;
+  overflow: hidden;
+}
+
+.btn {
+  border: 1px solid rgb(241, 234, 234);
+  padding: clamp(0.25rem, 0.5vw, 0.5rem);
+  border-radius: 0.3rem;
+  color: rgb(241, 233, 233);
+  background-color: #a65dcf;
+}
+
+.btn:hover {
+  background-color: #763999;
+  border: 1px solid #673485;
+}
+
+.btn:active {
+  border: 1px solid rgb(241, 234, 234);
+}
+
+@media (max-width: 960px) {
+  @media screen and (orientation: landscape) {
+    html,
+    main {
+      height: auto;
+    }
+  }
+}
